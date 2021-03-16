@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+.top {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #efefef;
+  position: relative;
+}
+
+.top img {
+  display: block;
+  max-width: 30vw;
+  max-height: 75vh;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+
+.title-back {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  font-family: "Helvetica";
+  text-align: center;
+  margin: 2px;
+}
+
+.nuku-pay {
+  font-weight: 600;
+  font-size: 10vw;
+  color: #333;
+  letter-spacing: 6px;
+}
+
+.nuku-pay-sub {
+  font-weight: 300;
+  font-size: 3vw;
+  font-style: italic;
+  color: #333;
+  letter-spacing: 3px;
+}
+
+.nuku-pay-sub2 {
+  font-weight: 300;
+  font-size: 1.5vvw;
+  color: #333;
+  letter-spacing: 3px;
+}
+
+/* .nuku-pay-sub::first-letter {
+  color: rgb(255, 255, 255);
+} */
+
+.title-container {
+  width: 80vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.join-button {
+  max-width: 30vw;
+  background: linear-gradient(45deg, #ffa5e4, #a5e5ff);
+  color: #fff;
+  font-size: 2vw;
+  font-family: 'Helvetica';
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 100px;
+  animation: color-animation 5s infinite;
+  margin-top: 5vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.join-button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.join-button:hover {
+  transform: scale(1.02);
+  transition: 0.1s;
+}
+
+#second-page {
+  background-color: rgb(169, 245, 255);
+  height: 120vh;
+}
+
+@keyframes color-animation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+#blobSvg {
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 100%;
+}
+
+#blobSvg2 {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+
+@media all and (max-width:480px) {
+  .top img {
+    left: 50%;
+    max-width: 60vw;
+  }
+
+  .join-button,
+  .nuku-pay,
+  .nuku-pay-sub,
+  .nuku-pay-sub2,
+  .title-back {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .join-button {
+    min-width: 80vw;
+    margin-top: 30px;
+    box-sizing: border-box;
+    font-size: 3vw;
+  }
+
+  #blobSvg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+  }
+
+  #blobSvg2 {
+    display: none;
+  }
+}
